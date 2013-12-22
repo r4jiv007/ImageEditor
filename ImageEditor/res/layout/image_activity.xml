@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.app.imageeditor.views.TouchImageView
+        android:id="@+id/xoom_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/brightness_seekbar_holder"
+        android:layout_width="50dp"
+        android:layout_height="310dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/seekbar_bg"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone" >
+
+        <com.app.imageeditor.views.VerticalSeekBar
+            android:id="@+id/brightness_Seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="255dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contrast_seekbar_holder"
+        android:layout_width="50dp"
+        android:layout_height="310dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/seekbar_bg"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone" >
+
+        <com.app.imageeditor.views.VerticalSeekBar
+            android:id="@+id/contrast_Seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="255dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset" />
+    </LinearLayout>
+
+</RelativeLayout>

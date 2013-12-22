@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_back"
+          android:title="Back"
+          android:showAsAction="always" />
+    <item android:id="@+id/action_brightness"
+          android:title="Brightness"
+          android:showAsAction="never" />
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_contrast"
+          android:title="Contrast"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_rotate"
+          android:title="Rotate"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_crop"
+          android:title="Crop"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_resetAll"
+          android:title="Reset_All"
+          android:showAsAction="never" />
+    
+</menu>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/mylayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".CropImageActivity" >
+
+        <com.edmodo.cropper.CropImageView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/CropImageView"
+            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!--
+             <LinearLayout
+            android:id="@+id/showGuidelinesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal" >
+        -->
+
+        <TextView
+            android:id="@+id/showGuidelines"
+            style="@style/RoboTheme"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/CropImageView"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="right"
+            android:text="@string/showGuidelines" />
+
+        <!--
+                 <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+        -->
+
+        <Spinner
+            android:id="@+id/showGuidelinesSpin"
+            style="@style/RoboTheme"
+            android:layout_below="@id/CropImageView"
+            android:layout_toRightOf="@id/showGuidelines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/showGuidelinesArray"
+            android:gravity="left" />
+        <!--
+        </LinearLayout>
+        </LinearLayout>
+        -->
+
+        <Button
+            android:id="@+id/Button_crop"
+            style="@style/RoboTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/showGuidelinesSpin"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="25dp"
+            android:text="@string/crop"
+            android:textColor="#33B5E5"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/croppedImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/Button_crop"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/croppedImageDesc" />
+        
+         <Button
+            android:id="@+id/submit_button"
+            style="@style/RoboTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/croppedImageView"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:text="Submit"
+            android:textColor="#33B5E5"
+            android:visibility="gone"
+            android:textSize="18sp" />
+        
+          <Button
+            android:id="@+id/cancel_button"
+            style="@style/RoboTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/croppedImageView"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:text="Cancel"
+            android:visibility="gone"
+            android:textColor="#33B5E5"
+            android:textSize="18sp" />
+        
+        
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.edmodo.cropper.CropImageView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rotateImageView"
+            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    
+    
+     
+     <!--  <com.app.imageeditor.views.TouchImageView
+        android:id="@+id/rotateImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+      -->
+       <Button
+            android:id="@+id/rotate_btn"
+            style="@style/RoboTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/rotateImageView"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="25dp"
+            android:text="Rotate"
+            android:textColor="#33B5E5"
+            android:textSize="30sp" />
+
+      <Button
+            android:id="@+id/submit_button_rotate"
+            style="@style/RoboTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/rotate_btn"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:text="Submit"
+            android:layout_alignParentBottom="true"
+            android:textColor="#33B5E5"
+            android:visibility="gone"
+            android:textSize="18sp" />
+        
+          <Button
+            android:id="@+id/cancel_button_rotate"
+            style="@style/RoboTheme"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_below="@id/rotate_btn"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:text="Reset"
+            android:visibility="gone"
+            android:textColor="#33B5E5"
+            android:textSize="18sp" />
+       
+    
+
+</RelativeLayout>
+</ScrollView>
